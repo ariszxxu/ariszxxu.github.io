@@ -310,6 +310,23 @@ h3 a:hover {
   float: left;
 }
 
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-item {
+  flex-basis: 30%; /* Adjust this to control how many items per row */
+  margin: 10px;
+  text-align: center;
+}
+
+.project-item img {
+  width: 100%; /* Adjust image size */
+  height: auto;
+}
+
 /**************************************************/
 /* Subtle footer at the bottom of the page. */
 
