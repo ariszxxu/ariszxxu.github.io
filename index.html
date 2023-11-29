@@ -54,8 +54,8 @@
       </div>
 
       <div id="filters" class="button-group">
-        <button class="button is-checked" data-filter=".publication">Research</button>
-        <button class="button" data-filter=".project">Projects</button>
+        <button class="button" data-filter=".publication">Research</button>
+        <button class="button is-checked" data-filter=".project">Projects</button>
         <button class="button" data-filter=".cv">CV</button>
       </div>
 
@@ -248,7 +248,7 @@
       document.addEventListener('DOMContentLoaded', function() {
       var queryString = window.location.search;
       var urlParams = new URLSearchParams(queryString);
-      var section = urlParams.get('section'); // 获取'section'查询参数
+      var section = urlParams.get('section'); 
       if(section) {
         var button = document.querySelector(`button[data-filter='.${section}']`);
         if(button) {
@@ -256,6 +256,25 @@
         }
       }
       });
+      function adjustFooterMargin() {
+        var footer = document.getElementById('footer');
+        var footerHeight = footer.offsetHeight;
+        var publications = document.querySelector('.publication');
+        var projects = document.querySelector('.project');
+        var cv = document.querySelector('.cv');
+        var maxHeight = Math.max(
+          publications ? publications.offsetHeight : 0,
+          projects ? projects.offsetHeight : 0,
+          cv ? cv.offsetHeight : 0
+        );
+        var marginBottom = footerHeight + 'px';
+        if (publications) publications.style.marginBottom = marginBottom;
+        if (projects) projects.style.marginBottom = marginBottom;
+        if (cv) cv.style.marginBottom = marginBottom;
+      }
+
+      window.onload = adjustFooter;
+      window.onresize = adjustFooter; 
 
     </script>
   </body>

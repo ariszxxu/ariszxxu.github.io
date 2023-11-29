@@ -310,6 +310,10 @@ h3 a:hover {
   float: left;
 }
 
+.cv {
+  margin-bottom: 0.5em;
+}
+
 /**************************************************/
 /* Subtle footer at the bottom of the page. */
 
