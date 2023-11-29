@@ -245,6 +245,18 @@
 
       update_isotope();
 
+      document.addEventListener('DOMContentLoaded', function() {
+      var queryString = window.location.search;
+      var urlParams = new URLSearchParams(queryString);
+      var section = urlParams.get('section'); // 获取'section'查询参数
+      if(section) {
+        var button = document.querySelector(`button[data-filter='.${section}']`);
+        if(button) {
+          button.click();
+        }
+      }
+      });
+
     </script>
   </body>
 </html>
