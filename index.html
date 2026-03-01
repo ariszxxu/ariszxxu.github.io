@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amarna:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -28,6 +28,22 @@
     <link rel="stylesheet" href="style.css">
   </head>
  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("toggleNews");
+    const items = document.querySelectorAll(".hidden-news");
+
+    btn.addEventListener("click", function () {
+      const isHidden = window.getComputedStyle(items[0]).display === "none";
+
+      items.forEach(function (item) {
+        item.style.display = isHidden ? "list-item" : "none";
+      });
+
+      btn.textContent = isHidden ? "Show less" : "Show more";
+    });
+  });
+  </script>
   
   <body>
 
@@ -40,7 +56,7 @@
             <div class="col d-none d-md-block">
               <div class="d-flex justify-content-end flex-wrap">
               <a href="http://ariszxxu.github.io/" class="btn link-button" role="button">About</a>
-              <a href="http://ariszxxu.github.io/#coledproj" class="btn link-button" role="button">(Co)-Led Projects</a>
+              <a href="http://ariszxxu.github.io/#coledproj" class="btn link-button" role="button">(Co-)Led Projects</a>
               <a href="http://ariszxxu.github.io/#coopproj" class="btn link-button" role="button">Cooperative Projects</a>
               <a href="http://ariszxxu.github.io/#alumni" class="btn link-button" role="button">Alumni</a>
               <a href="http://ariszxxu.github.io/#services" class="btn link-button" role="button">Professional Services</a>
@@ -95,39 +111,52 @@
                 <!-- About: Right Column -->
                 <div class="col-sm-8 about-text">
                   <!-- Personal Info -->
-                  <p>Hi there! I'm a first-year PhD student (Aug. 2024-) at <a href="https://www.comp.nus.edu.sg">School of Computing, NUS</a>, advised by Prof. <a href="https://linsats.github.io">Lin Shao</a>. I am supported by the <a href="https://nusgs.nus.edu.sg/scholarships-list/">President's Graduate Fellowship (PGF)</a>.</p>
-                  <p>I obtained my B.Eng (Sep. 2020 - Jun. 2024) in Robotics 🤖 from <a href="https://www.zju.edu.cn/english/">Zhejiang University</a>, where I am lucky to work with <a href="https://xukechun.github.io">Kechun Xu</a>, Prof. <a href="https://person.zju.edu.cn/en/rongxiong">Rong Xiong</a> and Prof. <a href="https://ywang-zju.github.io/">Yue Wang</a>. </p>
-                  <p><mark>My research interests lie in <u>robot learning and dexterous manipulation</u> 🦾. I'm open to collaborations on robotics related projects! Feel free to contact me👋.</mark></p>
-
+                  <p>Hi there! I'm a second-year PhD candidate (Aug. 2024 - ) at <a href="https://www.comp.nus.edu.sg">School of Computing, NUS</a>, advised by Prof. <a href="https://linsats.github.io">Lin Shao</a>. I am supported by the <a href="https://nusgs.nus.edu.sg/scholarships-list/">President's Graduate Fellowship (PGF)</a>.</p>
+                  <p>I obtained my B.Eng. (Sep. 2020 - Jun. 2024) in Robotics 🤖 from <a href="https://www.zju.edu.cn/english/">Zhejiang University</a>, where I had the privilege of working with <a href="https://xukechun.github.io">Kechun Xu</a>, Prof. <a href="https://person.zju.edu.cn/en/rongxiong">Rong Xiong</a>, and Prof. <a href="https://ywang-zju.github.io/">Yue Wang</a>.</p>
+                  <p>My research focuses on <u>robot learning and dexterous manipulation</u> 🦾.</p>
+                  <p>
+                    <span class="career-highlight">
+                      I am actively exploring internship opportunities and future academic or industry positions.
+                    </span>
+                  </p>
                   <!-- News -->
                   <span class="news-title">News</span> 
                   <div class="expandable-list">
                     <ul>
+                      <li>
+                        <span class="news-date">Jan 2026</span> <span class="news-entry"> <a href="https://nus-lins-lab.github.io/trograspweb/">\(\mathcal{T(R,O)}\) Grasp</a> accepted to ICRA 2026.
+                      </li>
+                      <li>
+                        <span class="news-date">Dec 2025</span> <span class="news-entry"> Passed PhD qualification exam — officially a PhD candidate!
+                      </li>
+                      <li>
+                        <span class="news-date">Nov 2025</span> <span class="news-entry"> <a href="https://nus-lins-lab.github.io/dexsingweb/">DexSinGrasp</a> accepted to RA-L.
+                      </li>
                       <li>
                         <span class="news-date">Jun 2025</span> <span class="news-entry"> <a href="https://nus-lins-lab.github.io/metafoldweb/">MetaFold</a> accepted to IROS 2025 as <mark>Oral Presentation</mark>! </span>
                       </li>
                       <li>
                         <span class="news-date">May 2025</span> <span class="news-entry"> <a href="https://nus-lins-lab.github.io/drograspweb/">\(\mathcal{D(R,O)}\) Grasp</a> selected as <mark>Best Paper Award on Robot Manipulation and Locomotion</mark> @ ICRA 2025. <a href="https://nus-lins-lab.github.io/telepreview-web/">TelePreview</a> selected as <mark>Best Paper Award @ ICRA 2025 Workshop on Human-Centric Multilateral Teleoperation</mark>.</span>
                       </li>
-                      <li>
+                      <li class="hidden-news">
                         <span class="news-date">Apr 2025</span> <span class="news-entry"> <a href="https://nus-lins-lab.github.io/drograspweb/">\(\mathcal{D(R,O)}\) Grasp</a> selected as <mark>the Finalist of Best Paper Award & Best Paper Award on Robot Manipulation and Locomotion</mark> @ ICRA 2025.</span>
                       </li>
-                      <li>
+                      <li class="hidden-news">
                         <span class="news-date">Jan 2025</span> <span class="news-entry"> <a href="https://nus-lins-lab.github.io/drograspweb/">\(\mathcal{D(R,O)}\) Grasp</a> accepted to ICRA 2025. </span>
                       </li>
-                      <li>
+                      <li class="hidden-news">
                         <span class="news-date">Jan 2025</span> <span class="news-entry"> <a href="https://nus-lins-lab.github.io/flipweb/">FLIP</a> accepted to ICLR 2025. </span>
                       </li>
-                      <li>
+                      <li class="hidden-news">
                         <span class="news-date">Nov 2024</span> <span class="news-entry"> <a href="https://nus-lins-lab.github.io/drograspweb/">\(\mathcal{D(R,O)}\) Grasp</a> selected as <mark>Best Robotics Paper Award</mark> @ CoRL 2024 Workshop MAPoDeL! </span>
                       </li>
-                      <li>
+                      <li class="hidden-news">
                         <span class="news-date">Aug 2024</span> <span class="news-entry"> I am honored to funded by <a href="https://nusgs.nus.edu.sg/scholarships-list/">President's Graduate Fellowship (PGF)</a>. </span>
                       </li>
-                      <li>
+                      <li class="hidden-news">
                         <span class="news-date">Jun 2024</span> <span class="news-entry"> <a href="https://manifoundationmodel.github.io/">ManiFM</a> accepted to IROS 2024 as <mark>Oral Presentation</mark>! </span>
                       </li>
-                      <li>
+                      <li class="hidden-news">
                         <span class="news-date">Aug 2023</span> <span class="news-entry"> <a href="https://openreview.net/pdf?id=DYPOvNot5F">Diff-LfD</a> accepted to CoRL 2023 as <mark>Oral Presentation</mark>! </span>
                       </li>
                       <!-- <li class="extra-item">
@@ -135,6 +164,11 @@
                       </li> -->
                     </ul>
                     <!-- <span class="news-expand-button news-entry" id="newsExpandBtn">...show all...</span> -->
+
+                    <span id="toggleNews" style="cursor:pointer; color:#007bff;">
+                      Show more
+                    </span>
+
                   </div>
                 </div>
               </div>
@@ -144,9 +178,56 @@
               <a name="coledproj"></a> 
               <div class="row content-header">
                 <div class="col pr-0">
-                  <p>(Co)-Led Projects</p>
+                  <p>(Co-)Led Projects</p>
                 </div>
               </div><br>
+
+              <!-- ConSens -->
+              <div class="row content-summary pt-3 pb-2">
+                <!-- Teaser-->
+                <div class="d-none d-sm-block col-sm-3  m-0 p-0">
+                  <img src="images/consens.png" class="img-fluid summary-image drop-shadow" alt="teaser img">
+                </div>
+                <!-- Description -->
+                <div class="col-xs col-sm-9">
+                  <p class="summary-title">ConSens: Continuous and Unified Vision-Tactile Sensing for Dexterous Manipulation</p>
+                  <p class="summary-authors"><u>Zhixuan Xu</u>, Yichen Li, Xuanye Wu, Tianyu Qiu, Lin Shao</p>
+                  <p class="summary-publication-status">In Submission</p>
+                  <p class="summary-text">ConSens is a compact vision-tactile sensor that provides continuous feedback from pre-contact to post-contact, enabling dexterous manipulation through multi-sensor imitation learning and sim-to-real generalization.</p>
+                  <div class="d-flex flex-row flex-wrap">
+                    <div>
+                      <a href="files/consens_supp_video.mp4" class="btn-sm badge-button" role="button">Video</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- T(R,O)Grasp -->
+              <div class="row content-summary pt-3 pb-2">
+                <!-- Teaser-->
+                <div class="d-none d-sm-block col-sm-3  m-0 p-0">
+                  <img src="images/trograsp.jpg" class="img-fluid summary-image drop-shadow" alt="teaser img">
+                </div>
+                <!-- Description -->
+                <div class="col-xs col-sm-9">
+                  <p class="summary-title">\(\mathcal{T(R,O)}\) Grasp: Efficient Graph Diffusion of Robot-Object Spatial Transformation for Cross-Embodiment Dexterous Grasping</p>
+                  <p class="summary-authors">Xin Fei<sup>*</sup>, <u>Zhixuan Xu</u><sup>*</sup>, Huaicong Fang, Tianrui Zhang, Lin Shao</p>
+                  <p class="summary-publication-status">International Conference on Robotics and Automation (ICRA) 2026</p>
+                  <p class="summary-text">\(\mathcal{T(R,O)}\) Grasp is a diffusion-based framework with a unified hand-object graph representation for fast, accurate, and embodiment-general dexterous grasp synthesis, achieving 94.83% success at 0.21 s inference.</p>
+                  <div class="d-flex flex-row flex-wrap">
+                    <div>
+                      <a href="https://nus-lins-lab.github.io/trograspweb" class="btn-sm badge-button" role="button">Website</a>
+                    </div>
+                    <div>
+                      <a href="https://arxiv.org/pdf/2510.12724" class="btn-sm badge-button" role="button">arXiv</a>
+                    </div>
+                    <div>
+                      <a href="https://github.com/Barrybarry-Smith/TRO-Grasp" class="btn-sm badge-button" role="button">Code</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <!-- D(R,O)Grasp -->
               <div class="row content-summary pt-3 pb-2">
@@ -240,12 +321,13 @@
               <div class="row content-summary pt-3 pb-2">
                 <!-- Teaser-->
                 <div class="d-none d-sm-block col-sm-3  m-0 p-0">
-                  <img src=images/dexsingrasp.png class="img-fluid summary-image drop-shadow" alt="teaser img">
+                  <img src=images/dexsingrasp.gif class="img-fluid summary-image drop-shadow" alt="teaser img">
                 </div>
                 <!-- Description -->
                 <div class="col-xs col-sm-9">
                   <p class="summary-title">DexSinGrasp: Learning a Unified Policy for Dexterous Object Singulation and Grasping in Cluttered Environments</p>
                   <p class="summary-authors">Lixin Xu, Zixuan Liu, Zhewei Gui, Jingxiang Guo, Zeyu Jiang, <u>Zhixuan Xu</u>, Chongkai Gao, Lin Shao</p>
+                  <p class="summary-publication-status">IEEE Robotics and Automation Letters (RA-L) 2025</p>
                   <p class="summary-text">Introduce a unified policy for dexterous object singulation and grasping via clutter arrangement curriculum learning.</p>
                   <div class="d-flex flex-row flex-wrap">
                     <div>
@@ -396,7 +478,9 @@
                 <div class="col-xs col-sm-12">
                   <p class="summary-title">Journal Reviewer</p>
                   <ul>
+                    <li>IEEE Transactions on Robotics (T-RO)</li>
                     <li>IEEE Robotics and Automation Letters (RA-L)</li>
+                    <li>IEEE/ASME Transactions on Mechatronics (TMECH)</li>
                   </ul>
                 </div>
               </div>

@@ -2,10 +2,12 @@ html {
   background-color: #ffffff;
   font-size: 100%;
 }
-
+.hidden-news {
+  display: none;
+}
 body {
   /*font-family: 'Lato', sans-serif !important;*/
-  font-family: 'Lora', serif !important;
+  font-family: 'Amarna', serif !important;
 }
 .chinese-text  {
   font-family: 'LXGW WenKai Screen', serif;
@@ -176,7 +178,7 @@ a:active {
   margin-top: 0px;
   margin-bottom: 0px;
   color: #49bf9d;
-  font-family: 'Lora', serif;
+  font-family: 'Amarna', serif;
   font-style: italic;
 }
 .summary-publication-status-highlight::before {
@@ -190,19 +192,19 @@ a:active {
   margin-top: 0px;
   margin-bottom: 0px;
   color: #ffaf03;
-  font-family: 'Lora', serif;
+  font-family: 'Amarna', serif;
   font-style: italic;
 }
 .summary-publication-status-award::before {
   content: "\f091"; /* Unicode for Font Awesome trophy icon */
-  font-family: 'Lora', 'Font Awesome 6 Free', serif;
+  font-family: 'Amarna', 'Font Awesome 6 Free', serif;
   font-weight: 900; /* Font Awesome solid style */
   margin-right: 4px;
   font-style: normal;
 }
 .summary-publication-status-award::after {
   content: "\f091";
-  font-family: 'Lora', 'Font Awesome 6 Free', serif;
+  font-family: 'Amarna', 'Font Awesome 6 Free', serif;
   font-weight: 900;
   margin-left: 4px;
   font-style: normal;
@@ -238,7 +240,7 @@ a:active {
 }
 .summary-text::before {
   content: '\f002 TL;DR: ';
-  font-family: 'Lora','Font Awesome 6 Free', serif;
+  font-family: 'Amarna','Font Awesome 6 Free', serif;
   font-weight: 600;
 }
 .summary-image {
@@ -347,4 +349,19 @@ mark {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   color: inherit; 
+}
+
+.career-highlight {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right,
+    hsla(217, 100%, 84%, 0.05),
+    hsla(217, 100%, 84%, 0.35) 4%,
+    hsla(217, 100%, 84%, 0.2)
+  );
+  border-left: 4px solid hsla(217, 100%, 60%, 0.9);
+  font-weight: 600;
+  color: hsla(217, 100%, 60%, 1.0);   /* deep academic blue */
 }
