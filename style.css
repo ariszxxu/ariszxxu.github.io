@@ -346,6 +346,13 @@ mark {
   height: auto;
 }
 
+.publication-card .teaser-column img.teaser-image-shrink {
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .publication-card .description-column {
   flex: 1;
 }
