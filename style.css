@@ -6,29 +6,30 @@ html {
   display: none;
 }
 body {
-  /*font-family: 'Lato', sans-serif !important;*/
-  font-family: 'Amarna', serif !important;
+  font-family: var(--site-font);
+  font-weight: 400;
+  line-height: 1.55;
 }
 .chinese-text  {
-  font-family: 'LXGW WenKai Screen', serif;
+  font-family: var(--site-font);
 }
 /* Link colors */
 a:link {
-    color: #006EE7;
+    color: var(--accent-blue);
 }
 a:visited {
-    color: #006EE7;
+    color: var(--accent-blue);
 }
 a:hover {
-    color: #006EE7;
+    color: var(--accent-blue);
 }
 a:active {
-    color: #006EE7;
+    color: var(--accent-blue);
 }
 
 .footer-text {
   font-size: 0.8rem;
-  font-weight: lighter;
+  font-weight: 400;
   text-align: right;
   color: #555;
 }
@@ -42,10 +43,10 @@ a:active {
 }
 
 .title-name {
-  font-family: 'Alegreya SC', serif; 
-  font-size: 2.1em;
-  line-height: 90%;
-  font-weight:500;
+  font-family: var(--site-font);
+  font-size: 2em;
+  line-height: 1.15;
+  font-weight: 400;
 }
 .title-email {
   font-size: 1.2rem;
@@ -56,17 +57,17 @@ a:active {
 
 
 .link-button {
-  font-family: 'Alegreya', serif;
-  font-size: 1.5rem;
-  color: #006EE7; 
+  font-family: var(--site-font);
+  font-size: 1.1rem;
+  color: var(--accent-blue);
 }
 
 .link-button-small {
-  font-family: 'Alegreya', serif;
-  font-size: 1.2rem;
+  font-family: var(--site-font);
+  font-size: 1rem;
   padding-left: .5rem;
   padding-right: .5rem;
-  color: #006EE7;
+  color: var(--accent-blue);
 }
 
 .drop-shadow {
@@ -87,25 +88,19 @@ a:active {
 }
 
 .career-highlight,
-.text-highlight-brush {
+.research-focus {
   display: inline-block;
-  padding: 8px 14px;
-  border-radius: 10px;
-  background-image: linear-gradient(
-    to right,
-    hsla(217, 100%, 84%, 0.05),
-    hsla(217, 100%, 84%, 0.35) 4%,
-    hsla(217, 100%, 84%, 0.2)
-  );
-  border-left: 4px solid hsla(217, 100%, 60%, 0.9);
+  padding: 10px 14px;
+  border-radius: 4px;
+  background: var(--accent-soft);
 }
 
 /* Expand/collapsible news entries */
 
 .news-title {
-  font-family: 'Alegreya', serif;
-  font-size: 1.3rem;
-  font-weight: 200;
+  font-family: var(--site-font);
+  font-size: 1.15rem;
+  font-weight: 400;
 }
 
 .news-card {
@@ -115,7 +110,6 @@ a:active {
   border-radius: 8px;
   padding: 10px;
   background-color: #f9fafb;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .news-card ul {
@@ -151,9 +145,10 @@ a:active {
 .news-date {
   /* color: #E03838; */
   display: inline-block;
-  font-weight: 500;
-  inline-size: 4em;
-  font-family: 'Alegreya', serif;
+  font-weight: 400;
+  inline-size: 5.25em;
+  white-space: nowrap;
+  font-family: var(--site-font);
 }
 
 .news-entry {
@@ -164,7 +159,7 @@ a:active {
   cursor: pointer;
   text-align: center;
   margin-left: 1em;
-  color: #006EE7;
+  color: var(--accent-blue);
 }
 
 mark {
@@ -174,9 +169,9 @@ mark {
   background: transparent;
   background-image: linear-gradient(
     to right,
-    hsla(217, 100%, 84%, 0.1),
-    hsla(217, 100%, 84%, 0.5) 4%,
-    hsla(217, 100%, 84%, 0.3)
+    rgba(var(--accent-rgb), 0.03),
+    rgba(var(--accent-rgb), 0.14) 4%,
+    rgba(var(--accent-rgb), 0.08)
   );
   color: inherit;
 }
@@ -186,7 +181,7 @@ mark {
 .content-header {
   margin-bottom: 0px;
   border-bottom-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   text-align: right;
 }
 
@@ -195,8 +190,8 @@ mark {
 }
 
 .content-header p {
-  font-weight: bold;
-  font-size: 2.0rem;
+  font-weight: 400;
+  font-size: 1.65rem;
   margin-bottom: 0px;
   margin-right: 0px;
 }
@@ -210,18 +205,19 @@ mark {
 }
 
 .summary-title {
-  font-family: 'Alegreya', serif;
-  font-size: 1.3rem;
-  font-weight:500;
+  font-family: var(--site-font);
+  font-size: 1.2rem;
+  line-height: 1.35;
+  font-weight: 400;
   margin-bottom: 0px;
   margin-top: 0px;
   padding-top: 0px;
 }
 
 .summary-title-armana {
-  font-family: 'Amarna', serif;
+  font-family: var(--site-font);
   font-size: 1.0rem;
-  font-weight:500;
+  font-weight: 400;
   margin-bottom: 0px;
   margin-top: 0px;
   padding-top: 0px;
@@ -236,18 +232,20 @@ mark {
   font-size: 1rem;
   margin-top: 2px;
   margin-bottom: 2px;
-  color: #aaaaaa;
+  color: #666666;
 }
 .summary-text::before {
-  content: '\f002 TL;DR: ';
-  font-family: 'Amarna','Font Awesome 6 Free', serif;
-  font-weight: 600;
+  content: 'TL;DR: ';
+  font-family: var(--site-font);
+  font-weight: 400;
+  padding-left: 1.1em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23666' stroke-width='1.2' stroke-linecap='round'%3E%3Ccircle cx='6.5' cy='6.5' r='4.5'/%3E%3Cpath d='m10 10 4 4'/%3E%3C/svg%3E") left center / 0.9em 0.9em no-repeat;
 }
 
 .summary-publication-status {
   margin-top: 0px;
   margin-bottom: 0px;
-  color: #006EE7;
+  color: var(--accent-blue);
   font-style: italic;
 }
 
@@ -255,35 +253,35 @@ mark {
   margin-top: 0px;
   margin-bottom: 0px;
   color: #49bf9d;
-  font-family: 'Amarna', serif;
+  font-family: var(--site-font);
   font-style: italic;
 }
 .summary-publication-status-highlight::before {
   content: '★ ';
-  font-family: "Font Awesome 6 Free", 'Amarna', serif;
-  font-weight: 900;
+  font-family: var(--site-font);
+  font-weight: 400;
 }
 .summary-publication-status-highlight::after {
   content: ' ★';
-  font-family: "Font Awesome 6 Free", 'Amarna', serif;
-  font-weight: 900;
+  font-family: var(--site-font);
+  font-weight: 400;
 }
 
 .summary-publication-status-award {
   margin-top: 0px;
   margin-bottom: 0px;
   color: #ffaf03;
-  font-family: 'Amarna', serif;
+  font-family: var(--site-font);
 }
 .summary-publication-status-award::before {
   content: "\f091"; /* Unicode for Font Awesome trophy icon */
-  font-family: "Font Awesome 6 Free", 'Amarna', serif;
+  font-family: "Font Awesome 6 Free", var(--site-font);
   font-weight: 900; /* Required for solid icons in Font Awesome 6 */
   margin-right: 5px; /* Add some space after the icon */
 }
 .summary-publication-status-award::after {
   content: "\f091"; /* Unicode for Font Awesome trophy icon */
-  font-family: "Font Awesome 6 Free", 'Amarna', serif;
+  font-family: "Font Awesome 6 Free", var(--site-font);
   font-weight: 900; /* Required for solid icons in Font Awesome 6 */
   margin-left: 5px; /* Add some space before the icon */
 }
@@ -296,44 +294,108 @@ mark {
 
 .badge-button {
   font-size: 0.8rem;
-  background: hsla(217, 100%, 84%, 0.2) 4%;
+  background: var(--accent-soft);
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
   padding: 0.1em 0.5em; /* reduce vertical padding to make it less tall */
   display: inline-block;
-  color: #006EE7;
+  color: var(--accent-blue);
   border-radius: 4px;
 }
 
 .badge-button:hover {
   text-decoration: none;
-  background: hsla(217, 100%, 84%, 0.4);
+  background: var(--accent-hover);
 }
 
 :root {
-  --apple-surface: rgba(255, 255, 255, 0.95);
-  --apple-border: #d4d9e0;
-  --apple-shadow: 0 1px 1px rgba(15, 23, 42, 0.05), 0 6px 16px rgba(15, 23, 42, 0.06);
-  --apple-shadow-hover: 0 2px 5px rgba(15, 23, 42, 0.08), 0 10px 18px rgba(15, 23, 42, 0.08);
+  --accent-rgb: 0, 110, 231;
+  --accent-blue: rgb(var(--accent-rgb));
+  --accent-soft: rgba(var(--accent-rgb), 0.06);
+  --accent-hover: rgba(var(--accent-rgb), 0.12);
+  --site-font: 'Avenir', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.publication-views {
+  scroll-margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+.publication-views span {
+  color: #666666;
+}
+
+.publication-views button {
+  font: inherit;
+  color: #666666;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.publication-views button[aria-pressed="true"] {
+  color: var(--accent-blue);
+  border-bottom-color: currentColor;
+}
+
+.publication-views button:hover {
+  color: var(--accent-blue);
+}
+
+.publication-views button:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
+}
+
+#dated-paper-list {
+  margin-top: 24px;
+}
+
+.paper-frame {
+  position: relative;
+  padding: 5px;
+  border: 1px solid #e1e4e8;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(25, 35, 45, 0.08);
+}
+
+.paper-frame img {
+  display: block;
+}
+
+#dated-paper-list .publication-card[data-selected="true"] .paper-frame {
+  padding: 4.5px;
+  border-width: 1.5px;
+  border-color: rgba(var(--accent-rgb), 0.36);
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(var(--accent-rgb), 0.16);
 }
 
 .publication-card {
-  background: var(--apple-surface);
-  border: 1px solid var(--apple-border);
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: var(--apple-shadow);
-  margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 48px;
   display: flex;
   flex-direction: row;
-  align-items: center; /* This will vertically center both columns */
-  transition: box-shadow 0.2s ease-in-out;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  align-items: center;
 }
 
-.publication-card:hover {
-  box-shadow: var(--apple-shadow-hover);
+.publication-card + .publication-card::after {
+  content: '';
+  position: absolute;
+  top: -24px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e1e4e8;
+  pointer-events: none;
 }
 
 .publication-card .teaser-column {
