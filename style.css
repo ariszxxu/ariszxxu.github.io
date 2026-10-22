@@ -11,7 +11,7 @@ body {
   line-height: 1.55;
 }
 .chinese-text  {
-  font-family: var(--site-font);
+  font-family: 'LXGW WenKai Screen', serif;
 }
 /* Link colors */
 a:link {
@@ -87,8 +87,7 @@ a:active {
   text-decoration: none;
 }
 
-.career-highlight,
-.research-focus {
+.career-highlight {
   display: inline-block;
   padding: 10px 14px;
   border-radius: 4px;
